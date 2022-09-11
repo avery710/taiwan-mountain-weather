@@ -87,14 +87,14 @@ fetch(api) // promise based object
     })
     .then(jsonData => {
         arr = jsonData.records;
-        console.log(arr);
+        //console.log(arr);
 
         const btns = document.querySelectorAll("button");
         
         btns.forEach(btn => {
             btn.addEventListener('click', function(e){
                 const id = e.target.dataset.id;
-                console.log(`button clicked : ${id}`);
+                //console.log(`button clicked : ${id}`);
                 change_mainInfo(arr, id);
                 change_weather(arr, id);
                 let mount = createImage(id);
