@@ -14,43 +14,42 @@
     <body>
         <div id="taiwan">
             <img id="taiwan-bw" src="/image/taiwan.png">
+            <button data-id = "0">0</button>
+            <button data-id = "1">1</button>
+            <button data-id = "2">2</button>
+            <button data-id = "3">3</button>
+            <button data-id = "4">4</button>
+            <button data-id = "5">5</button>
         </div>
 
         <div id="main-info">
             <div class="basic-info">
                 <h1 id="location-name">台灣山岳天氣概況</h1>
-                <h2 id="altitude">城市</h2>
+                <h2 id="city">城市</h2>
                 <h2 id="t-now">氣溫</h2>
-                <h2 id="altitude">altitude:<span>-</span></h2>
-                <h3 id="latitude">latitude:<span>-</span></h3>
-                <h3 id="longtitude">longtitude:<span>-</span></h3>
+                <h2>altitude:<span id="altitude">-</span></h2>
+                <h3>latitude:<span id="latitude">-</span></h3>
+                <h3>longtitude:<span id="longtitude">-</span></h3>
             </div>
 
             <div class="weather-section">
-                <div id="temperature-section">
-                    <div class="t-section">
-                        <div>最低溫</div>
-                        <div>時間</div>
-                    </div>
-    
-                    <div class="t-section">
-                        <div>最高溫</div>
-                        <div>時間</div>
-                    </div>
+                <div id="temperature">
+                    <div>今日最低溫:<span id="low-tem">-</span>&#8451;</div>
+                    <div>今日最高溫:<span id="high-tem">-</span>&#8451;</div>
                 </div>
     
                 <div id="humid">
-                    <div id="accumulate">累積雨量</div>
-                    <div id="humidity">濕度</div>
+                    <div>24HR累積雨量:<span id="accumulate">-</span></div>
                 </div>
     
                 <div id="wind">
-                    <div id="wind-speed">風速</div>
+                    <div>風速:<span id="wind-speed">-</span></div>
                 </div>
             </div>
     
             <div id="others">
-                <div id="update-time">資料更新時間</div>
+                <div>資料更新時間:<span id="update-time">-</span></div>
+                <div>測站編號:<span id="stationId">-</span></div>
             </div>
         </div>
         

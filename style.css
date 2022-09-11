@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Montserrat', 'Noto Sans TC';
+    /*font-family: 'Noto Sans TC', sans-serif;*/
+    /*font-family: 'Press Start 2P', cursive;*/
 }
 
 body {
     height: 100vh;
-    
     background-image: url('/image/gray-bg.jpg');
     font-family: sans-serif;
     color: black;
@@ -20,27 +19,58 @@ body {
 
 #taiwan {
     background-color: aqua;
-    height: 150vh;
+    width: 62vw;
     position: absolute;
     top: 0;
-    right: 10%;
+    right: 8vw;
 }
 
 #taiwan-bw {
-    height: 150vh;
+    height: 200vh;
 }
 
 #main-info {
     position: fixed;
 }
 
-/*
-.location,
-.temperature {
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+button {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 0.7;
 }
-*/
+
+[data-id = "0"] {
+    top: vh;
+    right: 22vw;
+}
+
+[data-id = "1"] {
+    top: 60vh;
+    right: 22vw;
+}
+
+[data-id = "2"] {
+    top: 80vh;
+    right: 20vw;
+}
+
+[data-id = "3"] {
+    top: 20vh;
+    right: 20vw;
+}
+
+[data-id = "4"]{
+    top: 40vh;
+    right: 20vw;
+}
+
+[data-id = "5"] {
+    top: 50vh;
+    right: 20vw;
+}
+
