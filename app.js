@@ -68,9 +68,6 @@ fetch(api) // promise based object
             })
         })
         
-
-        //change_mainInfo(arr, id);
-        
     })
     .catch(error => {
         console.log('ERROR');
