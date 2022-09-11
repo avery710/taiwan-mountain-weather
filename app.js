@@ -13,7 +13,7 @@ function change_mainInfo(arr, id){
     document.getElementById("location-name").textContent = `${arr.location[id].locationName}`;
     document.getElementById("city").textContent = `${arr.location[id].parameter[0].parameterValue}`;
     document.getElementById("t-now").textContent = `${arr.location[id].weatherElement[3].elementValue}`;
-    document.getElementById("altitude").textContent = `${arr.location[id].weatherElement[0].elementValue}m`
+    document.getElementById("altitude").textContent = `${arr.location[id].weatherElement[0].elementValue}`
 
     document.getElementById("latitude").textContent = `${arr.location[id].lat}`;
     document.getElementById("longtitude").textContent = `${arr.location[id].lon}`;
@@ -25,10 +25,10 @@ function change_weather(arr, id){
     document.getElementById("high-tem").textContent = `${arr.location[id].weatherElement[12].elementValue}`;
 
     // humid
-    document.getElementById("accumulate").textContent = `${arr.location[id].weatherElement[6].elementValue}mm`;
+    document.getElementById("accumulate").textContent = `${arr.location[id].weatherElement[6].elementValue}`;
 
     // wind
-    document.getElementById("wind-speed").textContent = `${arr.location[id].weatherElement[2].elementValue}m/s`;
+    document.getElementById("wind-speed").textContent = `${arr.location[id].weatherElement[2].elementValue}`;
 
     // others
     document.getElementById("update-time").textContent = `${arr.location[id].time.obsTime}`;
@@ -60,24 +60,24 @@ function createBtn(mount){
 
 function set_default(){
     document.getElementById("location-name").textContent = `台灣山岳天氣概況`;
-    document.getElementById("city").textContent = `城市`;
-    document.getElementById("t-now").textContent = `氣溫`;
-    document.getElementById("altitude").textContent = ``
+    document.getElementById("city").textContent = `縣市`;
+    document.getElementById("t-now").textContent = `-`;
+    document.getElementById("altitude").textContent = `-`
     document.getElementById("latitude").textContent = `-`;
     document.getElementById("longtitude").textContent = `-`;
 
-    document.getElementById("low-tem").textContent = ``;
-    document.getElementById("high-tem").textContent = ``;
+    document.getElementById("low-tem").textContent = `-`;
+    document.getElementById("high-tem").textContent = `-`;
 
     // humid
-    document.getElementById("accumulate").textContent = ``;
+    document.getElementById("accumulate").textContent = `-`;
 
     // wind
-    document.getElementById("wind-speed").textContent = ``;
+    document.getElementById("wind-speed").textContent = `-`;
 
     // others
-    document.getElementById("update-time").textContent = ``;
-    document.getElementById("stationId").textContent = ``;    
+    document.getElementById("update-time").textContent = `-`;
+    document.getElementById("stationId").textContent = `-`;    
 }
 
 const api = `${BASE_URL}${INFO.dataid}?Authorization=${AUTHORIZE_CODE}&format=${INFO.format}&stationId=${INFO.stationId}`;
@@ -101,7 +101,6 @@ fetch(api) // promise based object
                 createBtn(mount);
             })
         })
-        
     })
     .catch(error => {
         console.log('ERROR');

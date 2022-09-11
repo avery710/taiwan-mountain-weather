@@ -4,12 +4,10 @@
     box-sizing: border-box;
 
     font-family: 'Montserrat', 'Noto Sans TC';
-    /*font-family: 'Noto Sans TC', sans-serif;*/
-    /*font-family: 'Press Start 2P', cursive;*/
+    color: rgb(44, 44, 44);
 }
 
 body {
-    height: 100vh;
     background-image: url('/image/gray-bg.jpg');
     font-family: sans-serif;
     color: black;
@@ -18,85 +16,95 @@ body {
 }
 
 #taiwan {
-    background-color: aqua;
-    width: 62vw;
+    width: 1000px;
     position: absolute;
-    top: 0;
-    right: 8vw;
+    top: 60px;
+    right: 100px;
 
     z-index: 10;
 }
 
 #taiwan-bw {
-    height: 200vh;
+    width: 100%;
 }
 
 .mount-img {
-    position: absolute;
-    right: 5%;
-    top: 10%;
-
-    width: 70%;
+    position: fixed;
+    right: 150px;
+    top: 150px;
+    width: 58%;
 
     z-index: 20;
 }
 
 .mount-btn {
-    position: absolute;
-    right: 5%;
-    top: 10%;
+    position: fixed;
+    right: 150px;
+    top: 150px;
 
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: 30px;
+    height: 30px;
+    background-color: black;
     border: none;
-    border-radius: 20px;
+    border-radius: 2px;
+    color: white;
+    font-size: 25px;
+    transition: transform 0.3s;
 
     z-index: 30;
 }
 
 #main-info {
+    margin-top: 150px;
+    margin-left: 100px;
     position: fixed;
+    z-index: 25;
 }
 
 #taiwan button {
     position: absolute;
-    background-color: red;
-    width: 20px;
-    height: 20px;
+    background-color: rgb(217, 68, 13);
+    width: 30px;
+    height: 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     z-index: 10;
     opacity: 0.7;
+    transition: transform 0.15s;
+}
+
+button:hover{
+    transform: scale(1.4);
+    cursor: pointer;
 }
 
 [data-id = "0"] {
-    top: vh;
-    right: 22vw;
+    top: 620px;
+    right: 340px;
 }
 
 [data-id = "1"] {
-    top: 60vh;
-    right: 22vw;
+    top: 1100px;
+    right: 490px;
 }
 
 [data-id = "2"] {
-    top: 80vh;
-    right: 20vw;
+    top: 1430px;
+    right: 640px;
 }
 
 [data-id = "3"] {
-    top: 20vh;
-    right: 20vw;
+    top: 500px;
+    right: 265px;
 }
 
 [data-id = "4"]{
-    top: 40vh;
-    right: 20vw;
+    top: 600px;
+    right: 350px;
 }
 
 [data-id = "5"] {
-    top: 50vh;
-    right: 20vw;
+    top: 485px;
+    right: 360px;
 }
 

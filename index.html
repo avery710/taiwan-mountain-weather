@@ -6,20 +6,21 @@
         <title>weather</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">   
+        
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="font.css">
     </head>
     <body>
-        <div id="taiwan">
+        <div id="taiwan" data-taiwan>
             <img id="taiwan-bw" src="/image/taiwan.png">
-            <button data-id = "0">0</button>
-            <button data-id = "1">1</button>
-            <button data-id = "2">2</button>
-            <button data-id = "3">3</button>
-            <button data-id = "4">4</button>
-            <button data-id = "5">5</button>
+            <button data-id = "0"></button>
+            <button data-id = "1"></button>
+            <button data-id = "2"></button>
+            <button data-id = "3"></button>
+            <button data-id = "4"></button>
+            <button data-id = "5"></button>
         </div>
 
         <div data-mount></div>
@@ -27,31 +28,35 @@
         <div id="main-info">
             <div class="basic-info">
                 <h1 id="location-name">台灣山岳天氣概況</h1>
-                <h2 id="city">城市</h2>
-                <h2>氣溫<span id="t-now">-</span>&#8451;</h2>
-                <h2>altitude:<span id="altitude">-</span></h2>
-                <h3>latitude:<span id="latitude">-</span></h3>
-                <h3>longtitude:<span id="longtitude">-</span></h3>
+
+                <h2 id="city">縣市</h2>
+                <h2>氣溫 <span id="t-now">-</span> &#8451;</h2>
+                <h2>海拔 <span id="altitude">-</span> m</h2>
+
+                <div class="h3-section">
+                    <h3>LATITUDE : <span id="latitude">-</span></h3>
+                    <h3>LONGTITUDE : <span id="longtitude">-</span></h3>
+                </div>
             </div>
 
             <div class="weather-section">
                 <div id="temperature">
-                    <div>今日最低溫:<span id="low-tem">-</span>&#8451;</div>
-                    <div>今日最高溫:<span id="high-tem">-</span>&#8451;</div>
+                    <div>今日最低溫 : <span id="low-tem">-</span> &#8451;</div>
+                    <div>今日最高溫 : <span id="high-tem">-</span> &#8451;</div>
                 </div>
     
                 <div id="humid">
-                    <div>24HR累積雨量:<span id="accumulate">-</span></div>
+                    <div>24HR累積雨量 : <span id="accumulate">-</span> mm</div>
                 </div>
     
                 <div id="wind">
-                    <div>風速:<span id="wind-speed">-</span></div>
+                    <div>風速 : <span id="wind-speed">-</span> m/s</div>
                 </div>
             </div>
     
             <div id="others">
-                <div>資料更新時間:<span id="update-time">-</span></div>
-                <div>測站編號:<span id="stationId">-</span></div>
+                <div>資料更新時間 : <span id="update-time">-</span></div>
+                <div>測站編號 : <span id="stationId">-</span></div>
             </div>
         </div>
         

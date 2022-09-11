@@ -1,0 +1,49 @@
+h1 {
+    display: inline-block;
+    font-size: 70px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 1px;
+    color: white;
+    line-height: 98%;
+    transition: background-color 0.15s;
+    margin-bottom: 5px;
+}
+
+h2 {
+    line-height: 99%;
+    margin-top: 5px;
+    font-size: 40px;
+    transition: transform 0.15s;
+}
+
+h2:hover, 
+.h3-section:hover,
+#temperature:hover,
+#wind:hover,
+#humid:hover,
+#others:hover {
+    transform: scale(1.1);
+}
+
+.h3-section {
+    margin-top: 5px;
+    transition: transform 0.15s;
+    font-weight: 600;
+}
+
+#temperature {
+    margin-top: 20px;
+}
+
+#temperature,
+#humid,
+#wind {
+    font-size: 24px;
+    transition: transform 0.15s;
+    font-weight: 500;
+}
+
+#others {
+    margin-top: 20px;
+    transition: transform 0.15s;
+}
