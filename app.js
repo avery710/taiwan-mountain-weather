@@ -9,14 +9,12 @@ const INFO = {
 
 let arr = [] // store all info into this array
 
-// element
-
-
 function change_mainInfo(arr, id){
     document.getElementById("location-name").textContent = `${arr.location[id].locationName}`;
     document.getElementById("city").textContent = `${arr.location[id].parameter[0].parameterValue}`;
     document.getElementById("t-now").textContent = `${arr.location[id].weatherElement[3].elementValue}`;
     document.getElementById("altitude").textContent = `${arr.location[id].weatherElement[0].elementValue}m`
+
     document.getElementById("latitude").textContent = `${arr.location[id].lat}`;
     document.getElementById("longtitude").textContent = `${arr.location[id].lon}`;
 }
@@ -35,20 +33,54 @@ function change_weather(arr, id){
     // others
     document.getElementById("update-time").textContent = `${arr.location[id].time.obsTime}`;
     document.getElementById("stationId").textContent = `${arr.location[id].stationId}`;
-
 }
 
-function value_default(arr){
+const mountElem = document.querySelector("[data-mount]");
+
+function createImage(id){
+    const mount = document.createElement("img");
+    mount.src = `./image/mount-${id}.jpg`;
+    mount.classList.add("mount-img");
+    mountElem.append(mount);
+    return mount;
+}
+
+function createBtn(mount){
+    const btn = document.createElement("button");
+    btn.textContent = "X";
+    btn.classList.add("mount-btn");
+    mountElem.append(btn);
+
+    btn.addEventListener("click", e => {
+        mount.remove();
+        set_default();
+        btn.remove();
+    })
+}
+
+function set_default(){
     document.getElementById("location-name").textContent = `台灣山岳天氣概況`;
     document.getElementById("city").textContent = `城市`;
     document.getElementById("t-now").textContent = `氣溫`;
     document.getElementById("altitude").textContent = ``
     document.getElementById("latitude").textContent = `-`;
     document.getElementById("longtitude").textContent = `-`;
+
+    document.getElementById("low-tem").textContent = ``;
+    document.getElementById("high-tem").textContent = ``;
+
+    // humid
+    document.getElementById("accumulate").textContent = ``;
+
+    // wind
+    document.getElementById("wind-speed").textContent = ``;
+
+    // others
+    document.getElementById("update-time").textContent = ``;
+    document.getElementById("stationId").textContent = ``;    
 }
 
 const api = `${BASE_URL}${INFO.dataid}?Authorization=${AUTHORIZE_CODE}&format=${INFO.format}&stationId=${INFO.stationId}`;
-
 fetch(api) // promise based object
     .then(response => {
         return response.json();
@@ -65,6 +97,8 @@ fetch(api) // promise based object
                 console.log(`button clicked : ${id}`);
                 change_mainInfo(arr, id);
                 change_weather(arr, id);
+                let mount = createImage(id);
+                createBtn(mount);
             })
         })
         
