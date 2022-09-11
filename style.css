@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url('/image/gray-bg.jpg');
+    background-image: url('./image/gray-bg.jpg');
     font-family: sans-serif;
     color: black;
 
