@@ -5,24 +5,55 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1.0">
         <title>weather</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="location">
-            <h1 class="location-timezone">Timezone</h1>
-            <p>icon</p>
+        <div id="taiwan">
+            <img id="taiwan-bw" src="/image/taiwan.png">
         </div>
 
-        <div class="temperature">
-            <div class="degree-section">
-                <h2 class="temperature-degree">34</h2>
-                <span>F</span>
+        <div id="main-info">
+            <div class="basic-info">
+                <h1 id="location-name">台灣山岳天氣概況</h1>
+                <h2 id="altitude">城市</h2>
+                <h2 id="t-now">氣溫</h2>
+                <h2 id="altitude">altitude:<span>-</span></h2>
+                <h3 id="latitude">latitude:<span>-</span></h3>
+                <h3 id="longtitude">longtitude:<span>-</span></h3>
             </div>
-            
-            <div class="temperature-description">Its freaking cold</div>
+
+            <div class="weather-section">
+                <div id="temperature-section">
+                    <div class="t-section">
+                        <div>最低溫</div>
+                        <div>時間</div>
+                    </div>
+    
+                    <div class="t-section">
+                        <div>最高溫</div>
+                        <div>時間</div>
+                    </div>
+                </div>
+    
+                <div id="humid">
+                    <div id="accumulate">累積雨量</div>
+                    <div id="humidity">濕度</div>
+                </div>
+    
+                <div id="wind">
+                    <div id="wind-speed">風速</div>
+                </div>
+            </div>
+    
+            <div id="others">
+                <div id="update-time">資料更新時間</div>
+            </div>
         </div>
-
-
+        
 
         <script src="app.js"></script>
     </body>
